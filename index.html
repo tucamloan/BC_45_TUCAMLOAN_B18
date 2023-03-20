@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÀI TẬP MẢNG</title>
+    <!--cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!--css bootraps-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!--css-->
+    <link rel="stylesheet" href="./style/index.css">
+
+
+</head>
+
+<body>
+
+    <div class="container mt-3">
+
+        <input class="form-control d-inline w-25" id="nhap-so" placeholder="Nhập số n" type="number" />
+        <button id="btnThemMang" class="btn btn-success my-2">Thêm giá trị</button>
+
+        <div class="alert alert-warning my-2" id="ket-qua-bai-0">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+            </svg> -->
+        </div>
+        <br>
+        <div class="container-2">
+            <h3><i class="bi bi-1-circle-fill"></i>
+                1. Tổng số dương </h3>
+            <button id="btnTongSoDuong" class="btn btn-success" class="my-2">Tổng số dương</button>
+
+            <div id="ket-qua-bai-1" class="alert alert-primary my-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                </svg>
+            </div>
+            <hr>
+            <h3><i class="bi bi-1-circle-fill"></i>
+                2. Đếm số dương </h3>
+            <button id="btnDemSoDuong" class="btn btn-success" class="my-2">Đếm số</button>
+
+            <div id="ket-qua-bai-2" class="alert alert-primary my-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                </svg>
+            </div>
+            <hr>
+            <h3><i class="bi bi-1-circle-fill"></i>
+                3. Tìm số nhỏ nhất </h3>
+            <button id="btnSoNhoNhat" class="btn btn-success" class="my-2">Tìm số nhỏ nhất</button>
+
+            <div id="ket-qua-bai-3" class="alert alert-primary my-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                </svg>
+            </div>
+            <hr>
+            <h3><i class="bi bi-1-circle-fill"></i>
+                4. Tìm số dương nhỏ nhất </h3>
+            <button id="btnSoDuongNhoNhat" class="btn btn-success" class="my-2">Tìm số dương nhỏ nhất</button>
+
+            <div id="ket-qua-bai-4" class="alert alert-primary my-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                </svg>
+            </div>
+            <hr>
+            <h3><i class="bi bi-1-circle-fill"></i>
+                5. Tìm số chẵn cuối cùng </h3>
+            <button id="btnSoChanCuoi" class="btn btn-success" class="my-2">Tìm số chẵn cuối cùng</button>
+
+            <div id="ket-qua-bai-5" class="alert alert-primary my-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                </svg>
+            </div>
+            <hr>
+            <h3><i class="bi bi-1-circle-fill"></i>
+                6. Đổi chỗ </h3>
+                <input class="form-control d-inline w-25" id="vi-tri-1" placeholder="Nhập số vị trí 1" type="number"/>
+                <input class="form-control d-inline w-25" id="vi-tri-2" placeholder="Nhập số vị trí 2" type="number"/>
+
+                <button id="btnDoiCho" class="btn btn-success my-2">Đổi chỗ</button>
+        
+            <div id="ket-qua-bai-6" class="alert alert-primary my-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                </svg>
+            </div>
+            <hr>
+            <h3><i class="bi bi-1-circle-fill"></i>
+                7. Sắp xếp tăng dần </h3>
+            <button id="btnSapXep" class="btn btn-success" class="my-2">Tìm số chẵn cuối cùng</button>
+
+            <div id="ket-qua-bai-7" class="alert alert-primary my-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                </svg>
+            </div>
+            <hr>
+            <h3><i class="bi bi-1-circle-fill"></i>
+                8. Tìm số nguyên tố đầu tiên </h3>
+            <button id="btnSoNguyenTo" class="btn btn-success" class="my-2">Tìm số nguyên tố đầu tiên</button>
+
+            <div id="ket-qua-bai-8" class="alert alert-primary my-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                </svg>
+            </div>
+            <hr>
+            <h3><i class="bi bi-1-circle-fill"></i>
+                9.  Đếm số nguyên </h3>
+                <input class="form-control d-inline w-25" id="nhap" placeholder="Nhập số" type="number" />
+
+            <button id="btnThemSo" class="btn btn-success" class="my-2">Thêm số</button> 
+            <div id="ket-qua-bai-9-1" class="alert alert-primary my-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                </svg>
+            </div>
+            <button id="btnDemSoNguyen" class="btn btn-success" class="my-2" >Đếm số nguyên</button>
+
+            <div id="ket-qua-bai-9-2" class="alert alert-primary my-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                </svg>
+            </div>
+            <hr>
+            <h3><i class="bi bi-1-circle-fill"></i>
+                10. So sánh số lượng số âm và số dương </h3>
+            <button id="btnSoSanhSo" class="btn btn-success" class="my-2">So sánh</button>
+
+            <div id="ket-qua-bai-10" class="alert alert-primary my-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                    class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                </svg>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- js bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!--JS-->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
